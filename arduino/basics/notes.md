@@ -34,3 +34,33 @@
   - 0% → OFF
   - 50% → medium brightness
   - 100% → fully ON
+
+## Arduino IDE
+
+### Sketch structure (execution model)
+Arduino programs (sketches) have two main functions:
+
+- `setup()` runs **once** when the board powers up / resets / after upload.
+  Use it for initialization (e.g., `pinMode`, `Serial.begin`, WiFi setup).
+- `loop()` runs **forever**.
+  This is where the device behavior lives (reading sensors, controlling LEDs/motors, etc.).
+
+Key idea:
+Arduino is a **reactive system** (behavior over time), not a “run once and exit” program.
+
+### Upload + board memory
+After uploading, the Arduino stores the last program in memory.
+If you unplug and plug it back in, it will run the same program again.
+
+### Serial Monitor (debugging & communication)
+Serial Monitor is a tool to see messages sent from Arduino to the computer (and optionally send messages back).
+
+To use it:
+- Start serial in `setup()`:
+  - `Serial.begin(9600);`
+- Print messages in `loop()`:
+  - `Serial.println("Hello");`
+
+Important:
+The Serial Monitor baud rate must match the value in `Serial.begin(...)` (e.g., 9600).
+TX/RX LEDs indicate sending/receiving data over serial.
