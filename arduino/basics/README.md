@@ -19,11 +19,15 @@
 
 ## Mini Project: LED Sequence
 
-- [Code File](./pwm_sequence.ino)
-- [Setup 1](./image/Setup1.jpg)
-- [Setup 2](./image/Setup2.jpg)
+Simple LED sequence using digital output pins.
 
+### Project Files
+
+- [Code – pwm_sequence.ino](./pwm_sequence.ino)
+- [Setup Image 1](./image/Setup1.jpg)
+- [Setup Image 2](./image/Setup2.jpg)
 ---
 
 ## Status
 In Progress
+
