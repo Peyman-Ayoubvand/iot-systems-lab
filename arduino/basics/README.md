@@ -1,46 +1,29 @@
 # Arduino Basics
 
-## Goal
-Build a strong foundation in Arduino programming and hardware interaction.
-
----
-
 ## Topics Covered
-
 - Introduction to Arduino
 - Arduino IDE
-- Understanding `setup()` and `loop()`
-- Digital Input and Output (HIGH / LOW logic)
-- Analog Input (10-bit ADC: 0–1023)
-- Basic PWM (Pulse Width Modulation)
+- setup() and loop()
+- Digital Input / Output
+- Analog Input (10-bit ADC)
+- PWM (Pulse Width Modulation)
 
 ---
 
-## Reference Materials
+## References
 
-### Arduino Uno Pinout
-Link:
-./image/Arduino%20Uno%20Pinout.jpg
-
-### PWM Signal Example
-Link:
-./image/Pulse-Width-Modulation.webp
+- [Arduino Uno Pinout](./image/Arduino%20Uno%20Pinout.jpg)
+- [PWM Diagram](./image/Pulse-Width-Modulation.webp)
 
 ---
 
 ## Mini Project: LED Sequence
 
-Simple LED sequence using digital output pins.
-
-### Project Files
-- Code: `pwm_sequence.ino`
-- Setup Image 1: `./image/Setup1.jpg`
-- Setup Image 2: `./image/Setup2.jpg`
+- [Code File](./pwm_sequence.ino)
+- [Setup 1](./image/Setup1.jpg)
+- [Setup 2](./image/Setup2.jpg)
 
 ---
 
-## Current Progress
+## Status
 In Progress
-
-
-
