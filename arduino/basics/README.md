@@ -1,33 +1,54 @@
 # Arduino Basics
 
+This section covers the fundamental concepts of Arduino programming and hardware interaction.
+
+It includes core theory, reference materials, and hands-on practice projects.
+
+---
+
 ## Topics Covered
+
 - Introduction to Arduino
 - Arduino IDE
-- setup() and loop()
+- Program structure: setup() and loop()
 - Digital Input / Output
 - Analog Input (10-bit ADC)
 - PWM (Pulse Width Modulation)
+- Basic circuit wiring with resistors
+- Understanding common GND
 
 ---
 
-## References
+## Reference Materials
 
 - [Arduino Uno Pinout](./image/Arduino%20Uno%20Pinout.jpg)
-- [PWM Diagram](./image/Pulse-Width-Modulation.webp)
+- [PWM Signal Diagram](./image/Pulse-Width-Modulation.webp)
 
 ---
 
-## Mini Project: LED Sequence
+## Practice Project – PWM LED Sequence
 
-Simple LED sequence using digital output pins.
+A simple multi-LED sequence project using Arduino digital output pins.
 
-### Project Files
+Project folder:
+projects/pwm_led_sequence/
 
-- [Code – pwm_sequence.ino](./pwm_sequence.ino)
-- [Setup Image 1](./image/Setup1.jpg)
-- [Setup Image 2](./image/Setup2.jpg)
+Project files:
+
+- [Code – pwm_sequence.ino](./projects/pwm_led_sequence/pwm_sequence.ino)
+- [Setup Image 1](./projects/pwm_led_sequence/images/Setup1.jpg)
+- [Setup Image 2](./projects/pwm_led_sequence/images/Setup2.jpg)
+
+---
+
+## Notes
+
+Detailed learning notes and concept explanations are available in:
+
+- [notes.md](./notes.md)
+
 ---
 
 ## Status
-In Progress
 
+In Progress
