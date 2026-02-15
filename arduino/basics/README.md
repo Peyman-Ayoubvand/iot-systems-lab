@@ -18,9 +18,29 @@ Build a strong foundation in Arduino programming and hardware interaction.
 
 **PWM Signal Example**
 [PWM Diagram](./image/Pulse-Width-Modulation.webp)
+---
+
+## Mini Project: LED Sequence (Digital Output)
+
+A simple LED sequence using Arduino digital pins.
+
+### Photos
+- ![Setup 1](./image/Setup1.jpg)
+- ![Setup 2](./image/Setup2.jpg)
+
+### Code
+- `pwm_sequence.ino`
+
+### Notes
+This mini project practices:
+- `pinMode()` and `digitalWrite()`
+- wiring LEDs with resistors
+- common GND
+
 
 ## Current Progress
 In Progress
+
 
 
 
