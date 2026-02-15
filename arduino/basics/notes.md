@@ -1,66 +1,165 @@
+# Arduino Basics Notes
+
+---
+
 ## Introduction to Arduino
 
-- Arduino is both hardware (a microcontroller board) and software (Arduino IDE).
-- It is an open-source ecosystem.
-- Open-source means the hardware designs and software code are publicly available and can be modified by anyone.
-- The main purpose of Arduino is rapid prototyping.
-- Rapid prototyping allows quick testing:
-  Write code → Upload to board → Test → Modify quickly.
-- It is mainly used for robotics and electronics projects.
+- Arduino is both **hardware** (a microcontroller board) and **software** (Arduino IDE).
+- It is an **open-source ecosystem**.
+- Open-source means hardware designs and software code are publicly available and modifiable by anyone.
+- The main purpose of Arduino is **rapid prototyping**.
+- Rapid prototyping workflow:
+  Write code → Upload → Test → Modify → Repeat
+- Commonly used in:
+  - robotics
+  - embedded systems
+  - electronics projects
+  - automation
 
-## Hardware Basics 
+---
+
+## Hardware Basics
 
 ### Power
-- Arduino operates on 5V DC.
-- 5V and GND pins provide power to external components.
-- This is a constant DC voltage (not AC).
+
+- Arduino operates at **5V DC**
+- `5V` and `GND` pins provide power to external components
+- This is constant DC voltage (not AC)
+- All components in a circuit must share **common GND**
+
+---
 
 ### Digital Pins
-- Two states only:
-  - HIGH (5V)
-  - LOW (0V)
-- Used for switches, buttons, LEDs (on/off)
 
-### Analog Input
+Digital pins have two states only:
+
+- HIGH → 5V
+- LOW → 0V
+
+Used for:
+- switches
+- buttons
+- LEDs (on/off)
+- relays
+
+Important:
+Digital signals are binary (no in-between values).
+
+---
+
+### Analog Input (ADC)
+
 - Reads variable voltage from 0V to 5V
-- Uses a 10-bit ADC
-- Output range: 0 → 1023
-- Used for sensors and potentiometers
+- Uses a **10-bit ADC**
+- Output range:
+  - 0V → 0
+  - 5V → 1023
+- Used for:
+  - sensors
+  - potentiometers
+  - variable signals
+
+Resolution formula:
+1024 steps (2^10)
+
+---
 
 ### PWM (Pulse Width Modulation)
-- Digital pin switches rapidly between 0V and 5V
-- Simulates analog output using duty cycle
-- Example:
-  - 0% → OFF
-  - 50% → medium brightness
-  - 100% → fully ON
+
+- Simulates analog output using fast HIGH/LOW switching
+- Controlled using `analogWrite(pin, value)`
+- Value range: 0–255 (8-bit resolution)
+
+Examples:
+- 0 → OFF
+- 127 → medium brightness
+- 255 → fully ON
+
+Used for:
+- LED brightness control
+- motor speed control
+
+Note:
+PWM is not true analog voltage — it is a time-based digital signal.
+
+---
 
 ## Arduino IDE
 
-### Sketch structure (execution model)
-Arduino programs (sketches) have two main functions:
+### Sketch Structure (Execution Model)
 
-- `setup()` runs **once** when the board powers up / resets / after upload.
-  Use it for initialization (e.g., `pinMode`, `Serial.begin`, WiFi setup).
-- `loop()` runs **forever**.
-  This is where the device behavior lives (reading sensors, controlling LEDs/motors, etc.).
+Every Arduino program (sketch) contains two main functions:
 
-Key idea:
-Arduino is a **reactive system** (behavior over time), not a “run once and exit” program.
+- `setup()`
+  - Runs **once**
+  - Used for initialization
+  - Example:
+    - `pinMode()`
+    - `Serial.begin()`
+    - hardware setup
 
-### Upload + board memory
-After uploading, the Arduino stores the last program in memory.
-If you unplug and plug it back in, it will run the same program again.
+- `loop()`
+  - Runs **forever**
+  - Contains device behavior
+  - Reads sensors
+  - Controls actuators
 
-### Serial Monitor (debugging & communication)
-Serial Monitor is a tool to see messages sent from Arduino to the computer (and optionally send messages back).
+Key Idea:
+Arduino is a **reactive system** (continuous execution over time),
+not a run-once program like traditional software.
 
-To use it:
-- Start serial in `setup()`:
-  - `Serial.begin(9600);`
-- Print messages in `loop()`:
-  - `Serial.println("Hello");`
+---
+
+### Upload & Board Memory
+
+- After uploading, the program is stored in flash memory.
+- If you unplug and reconnect power, the same program runs again.
+- Reset button restarts execution from `setup()`.
+
+---
+
+### Serial Monitor (Debugging & Communication)
+
+Serial Monitor allows communication between Arduino and the computer.
+
+Used for:
+- Debugging
+- Logging sensor values
+- Sending simple commands
+
+How to use:
+
+Start serial communication in `setup()`:
+
+`Serial.begin(9600);`
+
+Send data in `loop()`:
+
+`Serial.println("Hello");`
 
 Important:
-The Serial Monitor baud rate must match the value in `Serial.begin(...)` (e.g., 9600).
-TX/RX LEDs indicate sending/receiving data over serial.
+The baud rate in Serial Monitor must match the value used in `Serial.begin(...)`.
+
+Indicators:
+- TX LED → sending data
+- RX LED → receiving data
+
+---
+
+## Practical Notes
+
+- Every LED must use a current-limiting resistor (e.g., 220Ω)
+- Circuits must share a common ground
+- `delay(ms)` blocks execution during waiting time
+- Use PWM pins (marked with ~) for brightness control
+
+---
+
+## Current Level
+
+Basic understanding of:
+- Digital IO
+- Analog Input
+- PWM
+- Execution model
+- Serial debugging
