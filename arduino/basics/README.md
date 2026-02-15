@@ -25,8 +25,8 @@ Build a strong foundation in Arduino programming and hardware interaction.
 A simple LED sequence using Arduino digital pins.
 
 ### Photos
-- ![Setup 1](./image/Setup1.jpg)
-- ![Setup 2](./image/Setup2.jpg)
+- [Setup 1](./image/Setup1.jpg)
+- [Setup 2](./image/Setup2.jpg)
 
 ### Code
 - `pwm_sequence.ino`
@@ -40,6 +40,7 @@ This mini project practices:
 
 ## Current Progress
 In Progress
+
 
 
 
