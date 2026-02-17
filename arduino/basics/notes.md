@@ -42,7 +42,7 @@ Used for:
 - LEDs (on/off)
 - relays
 
-Important:
+Important:  
 Digital signals are binary (no in-between values).
 
 ---
@@ -59,7 +59,7 @@ Digital signals are binary (no in-between values).
   - potentiometers
   - variable signals
 
-Resolution formula:
+Resolution formula:  
 1024 steps (2^10)
 
 ---
@@ -79,7 +79,7 @@ Used for:
 - LED brightness control
 - motor speed control
 
-Note:
+Note:  
 PWM is not true analog voltage — it is a time-based digital signal.
 
 ---
@@ -104,9 +104,8 @@ Every Arduino program (sketch) contains two main functions:
   - Reads sensors
   - Controls actuators
 
-Key Idea:
-Arduino is a **reactive system** (continuous execution over time),
-not a run-once program like traditional software.
+Key Idea:  
+Arduino is a **reactive system** (continuous execution over time), not a run-once program like traditional software.
 
 ---
 
@@ -127,8 +126,6 @@ Used for:
 - Logging sensor values
 - Sending simple commands
 
-How to use:
-
 Start serial communication in `setup()`:
 
 `Serial.begin(9600);`
@@ -137,7 +134,7 @@ Send data in `loop()`:
 
 `Serial.println("Hello");`
 
-Important:
+Important:  
 The baud rate in Serial Monitor must match the value used in `Serial.begin(...)`.
 
 Indicators:
@@ -163,3 +160,108 @@ Basic understanding of:
 - PWM
 - Execution model
 - Serial debugging
+
+---
+
+## Digital Input – Button
+
+Digital pins can only read two states:
+
+HIGH → 5V  
+LOW → 0V
+
+Buttons are a common example of digital input.
+
+### Floating State
+If the input pin is not connected to either GND or 5V,
+its value becomes unstable and randomly changes between HIGH and LOW.
+
+This is called a floating pin.
+
+### Internal Pull-up Resistor
+
+Arduino has built-in pull-up resistors that can be enabled in software:
+
+`pinMode(8, INPUT_PULLUP);`
+
+Important: Logic becomes inverted
+
+Released → HIGH  
+Pressed → LOW
+
+---
+
+### Debouncing
+
+Mechanical buttons do not switch cleanly.
+When pressed, the signal rapidly toggles between HIGH and LOW for a few milliseconds.
+
+Arduino reads this as multiple presses.
+
+This effect is called **bouncing**.
+
+Solutions:
+- Small delay
+- Time based filtering using millis()
+
+---
+
+## Analog Input – Potentiometer
+
+Analog pins read a range of voltage values using a 10-bit ADC.
+
+0V → 0  
+5V → 1023
+
+A potentiometer is a variable resistor used to generate a changing voltage.
+
+### Wiring
+- One side → 5V
+- Other side → GND
+- Middle pin → A0
+
+### Mapping Values
+
+Analog input range: 0–1023  
+PWM output range: 0–255
+
+To convert between ranges:
+
+`map(value, 0,1023, 0,255);`
+
+Concept:
+
+Sensor → ADC → Processing → Output
+
+---
+
+## Hardware Communication
+
+Sometimes HIGH/LOW signals are not enough to communicate complex data.
+Microcontrollers use communication protocols.
+
+### Serial (UART)
+- Two devices
+- Requires baud rate agreement
+- Used with Serial Monitor
+
+### SPI
+- Fast communication
+- Multiple wires
+- One master, multiple slaves
+
+### I2C
+- Only two wires  
+SDA → A4  
+SCL → A5
+
+Multiple devices share the same bus using addresses.
+
+---
+
+## I2C LCD
+
+Using the `LiquidCrystal_I2C` library, Arduino can send text to an LCD display.
+
+This allows complex output such as characters and messages,
+which cannot be achieved using simple digital signals alone.
