@@ -28,7 +28,7 @@ It includes core theory, reference materials, and hands-on practice projects.
 
 ## Reference Materials
 
-- [Arduino Uno Pinout](./image/Arduino%20Uno%20Pinout.jpg)
+- [Arduino Uno Pinout](./image/arduino-uno-pinout.webp)
 - [PWM Signal Diagram](./image/Pulse-Width-Modulation.webp)
 
 ---
@@ -59,3 +59,4 @@ Detailed learning notes and concept explanations are available in:
 ## Status
 
 In Progress
+
