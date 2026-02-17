@@ -16,6 +16,13 @@ It includes core theory, reference materials, and hands-on practice projects.
 - PWM (Pulse Width Modulation)
 - Basic circuit wiring with resistors
 - Understanding common GND
+- Button input and internal pull-up resistor
+- Floating pins and debouncing
+- Potentiometer analog reading
+- Mapping values (0–1023 → 0–255)
+- Hardware communication basics
+- Serial vs SPI vs I2C
+- I2C LCD display usage
 
 ---
 
