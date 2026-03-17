@@ -47,6 +47,14 @@ The following pins are used for motor control:
   - Left turn
   - Right turn
 - Each movement is followed by a stop state
+- The car can be controlled using an IR remote
+- Each button triggers a movement:
+  - Forward
+  - Backward
+  - Left
+  - Right
+  - Stop
+- Speed can be increased or decreased using remote buttons
 
 ---
 
@@ -58,6 +66,11 @@ The following pins are used for motor control:
 - Function abstraction
 - Motor direction logic
 - Basic robotics control
+- IR remote input
+- Signal decoding
+- `switch-case` logic
+- Global state management
+- Input-driven control systems
 
 ---
 
