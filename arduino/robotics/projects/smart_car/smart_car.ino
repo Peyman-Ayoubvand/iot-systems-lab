@@ -1,11 +1,9 @@
+
 #define trigPin 7
 #define echoPin 4
 
 #define DECODE_NEC
 #include <IRremote.hpp>
-
-#define trigPin 7
-#define echoPin 4
 
 int globalSpeed = 255;
 
@@ -19,9 +17,12 @@ void setup() {
   //Connected To Motor A 
   pinMode(9,OUTPUT);
   pinMode(10,OUTPUT);
-
+  //ULTRASONIC SENSOR
   pinMode(trigPin,OUTPUT);
   pinMode(echoPin,INPUT);
+  //IRPROXIMETRY SENSOR
+  pinMode(8,INPUT);
+  pinMode(2,INPUT);
 
   stop();
 
@@ -66,14 +67,51 @@ void loop() {
       }
    }
 
-  // Detect obstacls
-  detectObstacle();
+  // read ultrasonic sensor
+  float distance;
+  readUltrasonicSensor(distance);
+
+
+
+  // read IR proximitry sensor
+  bool leftSensor, rightSensor;
+  readIRProximitySensors(leftSensor, rightSensor);
+
+  if (!leftSensor){
+    stop();
+    delay(500);
+    right(globalSpeed);
+    delay(250);
+    stop();
+    delay(500);
+    forwards(globalSpeed);
+  }
+
+    if (!rightSensor){
+    stop();
+    delay(500);
+    left(globalSpeed);
+    delay(250);
+    stop();
+    delay(500);
+    forwards(globalSpeed);
+  }
+
+    if (distance < 15){
+    stop();
+    delay(1000);
+    left(globalSpeed);
+    delay(300);
+    forwards(globalSpeed);
+  }
+
+  delay(1000);
 }
 
 void forwards(int speed){
   Serial.println("Moving Foewards");
-  int leftSpeed = speed;  
-  int rightSpeed = speed - 20;
+  int rightSpeed = speed -10;
+  int leftSpeed = speed;
   //motor A
   digitalWrite(5,LOW);
   analogWrite(6,rightSpeed);
@@ -140,18 +178,31 @@ float readDistance(){
 
 }
 
-void detectObstacle(){
-  float distance = readDistance();
+void readUltrasonicSensor(float &distance){
+  distance = readDistance();
   Serial.print("Destance: ");
   Serial.println(distance);
-  if (distance < 10 ){
-    stop();
-    delay(1000);
-    left(200);
-    delay(250);
-    forwards(globalSpeed);
-
-  }
   delay(100);
 }
+
+
+void readIRProximitySensors(bool &leftSensor, bool &rightSensor){
+  leftSensor = digitalRead(8);
+  rightSensor = digitalRead(2);
+      Serial.print("Left sensor reading: ");
+  if (leftSensor == false){
+    Serial.println("OBSTACLE");
+  }else{
+    Serial.println("NO OBSTACLE");
+  }
+  Serial.println(leftSensor);
+  Serial.print("Right sensor reading: ");
+   if (rightSensor == false){
+    Serial.println("OBSTACLE");
+  }else{
+    Serial.println("NO OBSTACLE");
+  }
+}
+
+
 
