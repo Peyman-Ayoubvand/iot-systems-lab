@@ -297,7 +297,6 @@ Using an IR receiver and a decoding library, Arduino can:
 - identify commands
 - trigger actions based on input
   
----
 
 ### Key Idea
 
@@ -317,16 +316,12 @@ Process:
 3. Measure time
 4. Convert time to distance
 
----
-
 ### Distance Formula
 
 distance = (time × speed of sound) / 2
 
 - Speed of sound ≈ 0.0343 cm/µs
 - Division by 2 accounts for the round trip
-
----
 
 ### Key Function
 
