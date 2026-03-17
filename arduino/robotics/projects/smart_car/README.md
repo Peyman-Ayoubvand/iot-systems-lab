@@ -50,3 +50,6 @@ An autonomous + remote-controlled smart car built using Arduino.
 
 ## Version
 v1 (Final)
+
+## Code
+See `smart_car_v1.ino` for the full implementation.
