@@ -55,6 +55,11 @@ The following pins are used for motor control:
   - Right
   - Stop
 - Speed can be increased or decreased using remote buttons
+- The car can detect obstacles using an ultrasonic sensor
+- If an obstacle is detected, the car reacts automatically
+- Supports both:
+  - manual control (IR remote)
+  - autonomous behavior (obstacle avoidance)
 
 ---
 
@@ -71,6 +76,11 @@ The following pins are used for motor control:
 - `switch-case` logic
 - Global state management
 - Input-driven control systems
+- Ultrasonic sensing
+- Distance measurement using time-of-flight
+- `pulseIn()` usage
+- Sensor integration
+- Autonomous decision making
 
 ---
 
