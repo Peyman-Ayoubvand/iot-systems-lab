@@ -329,8 +329,6 @@ distance = (time × speed of sound) / 2
 
 Measures how long a signal stays HIGH.
 
----
-
 ### Key Insight
 
 Distance sensing enables systems to react to the environment.
