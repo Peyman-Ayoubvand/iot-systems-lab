@@ -265,6 +265,7 @@ Using the `LiquidCrystal_I2C` library, Arduino can send text to an LCD display.
 
 This allows complex output such as characters and messages,
 which cannot be achieved using simple digital signals alone.
+
 ---
 
 ## Motor Control Basics
