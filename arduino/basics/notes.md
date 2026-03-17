@@ -265,3 +265,19 @@ Using the `LiquidCrystal_I2C` library, Arduino can send text to an LCD display.
 
 This allows complex output such as characters and messages,
 which cannot be achieved using simple digital signals alone.
+---
+
+## Motor Control Basics
+
+Motors require more current than Arduino pins can provide.
+
+Direct connection can damage the board.
+
+A **motor driver** is used to:
+
+- control motor direction
+- handle higher current safely
+- protect the Arduino
+
+The Arduino sends control signals,
+and the motor driver powers the motor.
