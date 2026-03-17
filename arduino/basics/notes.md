@@ -304,3 +304,40 @@ Using an IR receiver and a decoding library, Arduino can:
 Input → Decode → Action
 
 This enables real-time control of embedded systems.
+
+---
+
+## Ultrasonic Distance Sensor
+
+Ultrasonic sensors measure distance using sound waves.
+
+Process:
+1. Send a sound pulse
+2. Wait for echo
+3. Measure time
+4. Convert time to distance
+
+---
+
+### Distance Formula
+
+distance = (time × speed of sound) / 2
+
+- Speed of sound ≈ 0.0343 cm/µs
+- Division by 2 accounts for the round trip
+
+---
+
+### Key Function
+
+`pulseIn(pin, HIGH)`
+
+Measures how long a signal stays HIGH.
+
+---
+
+### Key Insight
+
+Distance sensing enables systems to react to the environment.
+
+This is the foundation of autonomous behavior.
