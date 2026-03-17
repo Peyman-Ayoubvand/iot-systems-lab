@@ -281,4 +281,26 @@ A **motor driver** is used to:
 - protect the Arduino
 
 The Arduino sends control signals,
-and the motor driver powers the motor.
+The motor driver powers the motor.
+
+---
+
+## IR Remote Control
+
+Infrared (IR) communication uses light signals to transmit data.
+
+Each button on a remote sends a unique encoded signal.
+
+Using an IR receiver and a decoding library, Arduino can:
+
+- detect button presses
+- identify commands
+- trigger actions based on input
+  
+---
+
+### Key Idea
+
+Input → Decode → Action
+
+This enables real-time control of embedded systems.
