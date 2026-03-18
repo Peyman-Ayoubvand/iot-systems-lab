@@ -11,8 +11,8 @@ An autonomous and remote-controlled robot car using multiple sensors.
 - IR remote control
 - Multiple sensor integration
 
-📁 Folder:
-- smart_car_arduino
+📁 Project Folder:  
+[Open Smart Car Arduino](./projects/smart_car_arduino)
 
 ---
 
@@ -23,5 +23,5 @@ A graphical interface to control the smart car and monitor sensor data in real-t
 - Real-time sensor feedback
 - Serial communication with Arduino
 
-📁 Folder:
-- smart_car_processing
+📁 Project Folder:  
+[Open Smart Car UI](./projects/smart_car_processing)
