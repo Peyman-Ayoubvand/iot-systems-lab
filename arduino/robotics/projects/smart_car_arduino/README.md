@@ -21,36 +21,32 @@ An autonomous + remote-controlled smart car built using Arduino.
 ## Pin Configuration
 
 ### Motor Driver
-- 5, 6 → Motor A
-- 9, 10 → Motor B
+- 5, 6 → Motor A  
+- 9, 10 → Motor B  
 
 ### IR Receiver
-- Pin 11
+- Pin 11  
 
 ### Ultrasonic Sensor
-- Trig → 7
-- Echo → 4
+- Trig → 7  
+- Echo → 4  
 
 ### IR Proximity Sensors
-- Left → Pin 8
-- Right → Pin 2
+- Left → Pin 8  
+- Right → Pin 2  
 
 ## Controls (IR Remote)
-- 2 → Forward
-- 8 → Backward
-- 4 → Left
-- 6 → Right
-- 5 → Stop
-- + / - → Speed Control
+- 2 → Forward  
+- 8 → Backward  
+- 4 → Left  
+- 6 → Right  
+- 5 → Stop  
+- +/- → Speed Control  
 
 ## Behavior
-- Obstacle (front) → Stop
-- Obstacle (left) → Turn right
-- Obstacle (right) → Turn left
-
-## Version
-v1 (Final)
+- Obstacle (front) → Stop  
+- Obstacle (left) → Turn right  
+- Obstacle (right) → Turn left  
 
 ## Code
-See `smart_car_v1.ino` for the full implementation.
-
+See `smart_car.ino` for the full implementation.
