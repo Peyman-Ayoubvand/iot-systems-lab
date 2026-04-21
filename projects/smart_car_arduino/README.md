@@ -1,24 +1,37 @@
 # Smart Car (Arduino)
 
-## Description
-An autonomous + remote-controlled smart car built using Arduino.
+## 📌 Description
+An autonomous + remote-controlled smart car built using Arduino.  
+The robot can detect obstacles and navigate automatically, or be controlled manually using an IR remote.
 
-## Features
-- IR Remote Control
-- Ultrasonic Distance Detection
-- IR Proximity Sensors (Left & Right)
-- Obstacle Avoidance System
-- Adjustable Speed
+---
 
-## Components
-- Arduino Uno
-- Motor Driver
-- DC Motors
-- IR Receiver + Remote
-- Ultrasonic Sensor (HC-SR04)
-- IR Proximity Sensors
+## 📸 Robot
 
-## Pin Configuration
+![Robot](images/robot-front-view.jpg)
+
+---
+
+## 🚀 Features
+- IR Remote Control  
+- Ultrasonic Distance Detection (HC-SR04)  
+- IR Proximity Sensors (Left & Right)  
+- Obstacle Avoidance System  
+- Adjustable Speed  
+
+---
+
+## 🧰 Components
+- Arduino Uno  
+- Motor Driver  
+- DC Motors  
+- IR Receiver + Remote  
+- Ultrasonic Sensor (HC-SR04)  
+- IR Sensors  
+
+---
+
+## 🔌 Pin Configuration
 
 ### Motor Driver
 - 5, 6 → Motor A  
@@ -31,11 +44,13 @@ An autonomous + remote-controlled smart car built using Arduino.
 - Trig → 7  
 - Echo → 4  
 
-### IR Proximity Sensors
+### IR Sensors
 - Left → Pin 8  
 - Right → Pin 2  
 
-## Controls (IR Remote)
+---
+
+## 🎮 Controls (IR Remote)
 - 2 → Forward  
 - 8 → Backward  
 - 4 → Left  
@@ -43,10 +58,24 @@ An autonomous + remote-controlled smart car built using Arduino.
 - 5 → Stop  
 - +/- → Speed Control  
 
-## Behavior
+---
+
+## ⚙️ Behavior
 - Obstacle (front) → Stop  
 - Obstacle (left) → Turn right  
 - Obstacle (right) → Turn left  
 
-## Code
-See `smart_car.ino` for the full implementation.
+---
+
+## 🎥 Demo Videos
+
+### Obstacle Avoidance
+https://youtu.be/BQObJWiTIyM
+
+### IR Remote Control
+https://youtu.be/699cxRvl1Wk
+
+---
+
+## 💻 Code
+See `smart_car.ino` for full implementation.
