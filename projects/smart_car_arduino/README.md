@@ -59,11 +59,9 @@ It detects obstacles using ultrasonic and IR sensors and can also be controlled 
 
 ## 🎮 Demo
 
-▶️ Obstacle avoidance in action  
-Watch on YouTube: https://youtu.be/BQObJWiTIyM
+▶️ Obstacle avoidance demo: [Watch on YouTube](https://youtu.be/BQObJWiTIyM)
 
-▶️ IR remote control demo  
-Watch on YouTube: https://youtu.be/699cxRvl1Wk
+▶️ IR remote control demo: [Watch on YouTube](https://youtu.be/699cxRvl1Wk)
 
 ---
 
