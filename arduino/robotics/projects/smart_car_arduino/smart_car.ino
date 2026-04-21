@@ -73,45 +73,44 @@ void loop() {
 
 
 
-  // read IR proximitry sensor
+  // read IR proximity sensor
   bool leftSensor, rightSensor;
   readIRProximitySensors(leftSensor, rightSensor);
 
-  if (!leftSensor){
-    stop();
-    delay(500);
-    right(globalSpeed);
-    delay(250);
-    stop();
-    delay(500);
-    forwards(globalSpeed);
-  }
-
-    if (!rightSensor){
-    stop();
-    delay(500);
-    left(globalSpeed);
-    delay(250);
-    stop();
-    delay(500);
-    forwards(globalSpeed);
-  }
-
-    if (distance < 15){
-    stop();
-    delay(1000);
-    left(globalSpeed);
-    delay(300);
-    forwards(globalSpeed);
-  }
-
+  if (distance < 15){
+  stop();
   delay(1000);
+  left(globalSpeed);
+  delay(300);
+  forwards(globalSpeed);
+}
+
+else if (!leftSensor){
+  stop();
+  delay(500);
+  right(globalSpeed);
+  delay(250);
+  stop();
+  delay(500);
+  forwards(globalSpeed);
+}
+
+else if (!rightSensor){
+  stop();
+  delay(500);
+  left(globalSpeed);
+  delay(250);
+  stop();
+  delay(500);
+  forwards(globalSpeed);
+}
+
 }
 
 void forwards(int speed){
   Serial.println("Moving Foewards");
-  int rightSpeed = speed -10;
-  int leftSpeed = speed;
+  int rightSpeed = speed;
+  int leftSpeed = speed -14;
   //motor A
   digitalWrite(5,LOW);
   analogWrite(6,rightSpeed);
