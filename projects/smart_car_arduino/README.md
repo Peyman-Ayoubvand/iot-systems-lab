@@ -75,6 +75,5 @@ Watch on YouTube: https://youtu.be/699cxRvl1Wk
 ---
 
 ## 💻 Code
-
-👉 You can view the full implementation here:  
-https://github.com/Peyman-Ayoubvand/iot-systems-lab/blob/main/projects/smart_car_arduino/smart_car.ino
+👉 You can see the full code here:  
+[smart_car.ino](./smart_car.ino)
