@@ -2,47 +2,47 @@
 
 ## 📌 Description
 An autonomous + remote-controlled smart car built using Arduino.  
-The robot can detect obstacles and navigate automatically, or be controlled manually using an IR remote.
+It detects obstacles using ultrasonic and IR sensors and can also be controlled via IR remote.
 
 ---
 
 ## 📸 Robot
-
-![Robot](images/robot-front-view.jpg)
+<img src="images/robot-front-view.jpg" width="350"/>
 
 ---
 
 ## 🚀 Features
-- IR Remote Control  
-- Ultrasonic Distance Detection (HC-SR04)  
-- IR Proximity Sensors (Left & Right)  
-- Obstacle Avoidance System  
-- Adjustable Speed  
+- Obstacle avoidance (Ultrasonic + IR sensors)  
+- IR remote control (manual driving)  
+- Forward, backward, left, right movement  
+- Adjustable speed  
+- Hybrid control (auto + manual)  
 
 ---
 
 ## 🧰 Components
 - Arduino Uno  
 - Motor Driver  
-- DC Motors  
+- DC Motors (2WD)  
 - IR Receiver + Remote  
 - Ultrasonic Sensor (HC-SR04)  
-- IR Sensors  
+- IR Sensors (Left & Right)  
+- 9V Battery  
 
 ---
 
 ## 🔌 Pin Configuration
 
 ### Motor Driver
-- 5, 6 → Motor A  
-- 9, 10 → Motor B  
+- Pin 5, 6 → Motor A  
+- Pin 9, 10 → Motor B  
 
 ### IR Receiver
 - Pin 11  
 
 ### Ultrasonic Sensor
-- Trig → 7  
-- Echo → 4  
+- Trig → Pin 7  
+- Echo → Pin 4  
 
 ### IR Sensors
 - Left → Pin 8  
@@ -50,32 +50,31 @@ The robot can detect obstacles and navigate automatically, or be controlled manu
 
 ---
 
-## 🎮 Controls (IR Remote)
-- 2 → Forward  
-- 8 → Backward  
-- 4 → Left  
-- 6 → Right  
-- 5 → Stop  
-- +/- → Speed Control  
-
----
-
-## ⚙️ Behavior
-- Obstacle (front) → Stop  
+## ⚙️ System Behavior
+- Obstacle (front) → Stop and turn  
 - Obstacle (left) → Turn right  
 - Obstacle (right) → Turn left  
 
 ---
 
-## 🎥 Demo Videos
+## 🎮 Demo
 
-### Obstacle Avoidance
-https://youtu.be/BQObJWiTIyM
+▶️ Obstacle avoidance in action  
+Watch on YouTube: https://youtu.be/BQObJWiTIyM
 
-### IR Remote Control
-https://youtu.be/699cxRvl1Wk
+▶️ IR remote control demo  
+Watch on YouTube: https://youtu.be/699cxRvl1Wk
+
+---
+
+## ⚠️ Limitations
+- 9V battery is not ideal for DC motors  
+- Motor power may be unbalanced  
+- Robot may drift or rotate slightly  
 
 ---
 
 ## 💻 Code
-See `smart_car.ino` for full implementation.
+
+👉 You can view the full implementation here:  
+https://github.com/Peyman-Ayoubvand/iot-systems-lab/blob/main/projects/smart_car_arduino/smart_car.ino
